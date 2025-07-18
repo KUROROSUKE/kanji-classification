@@ -89,4 +89,4 @@ for epoch in range(7):
         total_loss += loss.item()
     print(f"Epoch {epoch+1}, Loss: {total_loss:.2f}")
 
-torch.save(model.state_dict(), "NN2.pth")
+torch.save(model.state_dict(), "MODEL/NN2.pth")
