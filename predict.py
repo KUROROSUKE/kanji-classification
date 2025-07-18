@@ -6,7 +6,7 @@ import torch.nn.functional as F
 import os
 
 #どっちか
-TARGET_PATH = "handwriting_black_bg.png"
+TARGET_PATH = "handwrite/1.png"
 TARGET_CHAR = "3a2a"
 
 # NN.pyと同じ
@@ -42,7 +42,7 @@ class_names = sorted(os.listdir("chars"))  # chars ディレクトリが必要
 
 # モデルの準備
 model = SimpleCNN(num_classes=len(class_names)).to(device)
-model.load_state_dict(torch.load("NN.pth", map_location=device))
+model.load_state_dict(torch.load("MODEL/NN.pth", map_location=device))
 model.eval()
 
 # 推論関数
